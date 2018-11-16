@@ -38,4 +38,16 @@
     </bean>
 
     <!--dao配置end-->
+
+    <!--Service配置start-->
+    <context:component-scan base-package="com.rhwan.service"/>
+    <!--配置事务管理-->
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <!--注入连接池-->
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+
+    <!--开启事务注解-->
+    <tx:annotation-driven/>
+    <!--Service配置end-->
 </beans>

@@ -1,6 +1,7 @@
 package com.rhwan.domain;
 
 import java.math.BigDecimal;
+import java.util.Date;
 
 /**
  * @author wanrh@jurassic.com.cn
@@ -20,8 +21,19 @@ public class Items {
     //项目图片
     private String itemPic;
 
+    //项目创建时间
+    private Date itemDate;
+
     //备注
     private String memo;
+
+    public Date getItemDate() {
+        return itemDate;
+    }
+
+    public void setItemDate(Date itemDate) {
+        this.itemDate = itemDate;
+    }
 
     public Integer getId() {
         return id;
@@ -70,6 +82,7 @@ public class Items {
                 ", itemName='" + itemName + '\'' +
                 ", itemPrice=" + itemPrice +
                 ", itemPic='" + itemPic + '\'' +
+                ", itemDate=" + itemDate +
                 ", memo='" + memo + '\'' +
                 '}';
     }
