@@ -30,6 +30,10 @@
     <bean id="sqlSessionFactroy" class="org.mybatis.spring.SqlSessionFactoryBean">
     <!--引入数据源-->
         <property name="dataSource" ref="dataSource"/>
+        <!-- 配置mybatis全局配置文件 -->
+        <property name="configLocation" value="classpath:mybatis-config.xml"/>
+        <!-- 扫描sql配置文件 ,mapper.xml -->
+        <!--<property name="mapperLocations" value="classpath:com/rhwan/mapper/*.xml"/>-->
     </bean>
 
     <!--对所有dao接口包中的接口进行扫描，使用sqlSession对象为其创造代理对象，并放入容器中-->
